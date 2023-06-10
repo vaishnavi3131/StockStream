@@ -45,7 +45,7 @@ if(selected == 'Stocks Performance Comparison'):  # if user selects 'Stocks Perf
         # st.success('Loaded')
 
     dict_csv = pd.read_csv('StockStreamTickersData.csv', header=None,
-                           index_col=0, squeeze=True).to_dict()  # read csv file
+                           index_col=0).to_dict()  # read csv file
     symb_list = []  # list for storing symbols
     for i in dropdown:  # for each asset selected
         val = dict_csv.get(i)  # get symbol from csv file
