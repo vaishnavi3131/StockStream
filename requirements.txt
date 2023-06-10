@@ -5,4 +5,5 @@ holidays==0.24
 prophet==1.1.2
 streamlit==1.11.0
 streamlit_option_menu==0.3.2
-yfinance==0.1.74
+yfinance>=0.1.63
+
