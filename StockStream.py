@@ -132,8 +132,7 @@ elif(selected == 'Real-Time Stock Price'):  # if user selects 'Real-Time Stock P
     with st.spinner('Loading...'):  # spinner while loading
             time.sleep(2)
 
-    dict_csv = pd.read_csv('StockStreamTickersData.csv', header=None,
-                           index_col=0, squeeze=True).to_dict()  # read csv file
+    dict_csv = pd.read_csv('StockStreamTickersData.csv', header=None, index_col=0).to_dict()[1]  # read csv file
     symb_list = []  # list for storing symbols
 
     val = dict_csv.get(a)  # get symbol from csv file
@@ -207,8 +206,7 @@ elif(selected == 'Stock Prediction'):  # if user selects 'Stock Prediction'
     a = st.selectbox('Pick a Company', tickers)
     with st.spinner('Loading...'):  # spinner while loading
              time.sleep(2)
-    dict_csv = pd.read_csv('StockStreamTickersData.csv', header=None,
-                           index_col=0, squeeze=True).to_dict()  # read csv file
+    dict_csv = pd.read_csv('StockStreamTickersData.csv', header=None, index_col=0).to_dict()[1]  # read csv file
     symb_list = []  # list for storing symbols
     val = dict_csv.get(a)  # get symbol from csv file
     symb_list.append(val)  # append symbol to list
