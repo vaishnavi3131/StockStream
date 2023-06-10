@@ -1,5 +1,5 @@
 matplotlib==3.5.2
-pandas==1.4.3
+pandas>=1.0
 plotly==5.9.0
 holidays==0.24
 prophet==1.1.2
